@@ -25,6 +25,6 @@ router.put('/:id', updateUser);
 // Route for deleting a specific user by ID
 router.delete('/:id', deleteUser);
 // Route for Login a specific user 
-router.delete('/login', login);
+router.delete('/login').post(login);
 
 export default router;
