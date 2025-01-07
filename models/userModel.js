@@ -24,14 +24,14 @@ const userSchema = new mongoose.Schema({
     enum: ['Student', 'Teacher', 'Admin'], // Define specific roles
     required: true,
   },
-  isActive: {
-    type: Boolean,
-    default: true, // By default, the user is active
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now, // Automatically set the creation date
-  },
+  // isActive: {
+  //   type: Boolean,
+  //   default: true, // By default, the user is active
+  // },
+  // createdAt: {
+  //   type: Date,
+  //   default: Date.now, // Automatically set the creation date
+  // },
   wishlist:[
     {
 
