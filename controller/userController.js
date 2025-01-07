@@ -66,11 +66,11 @@ export const getUserById = async (req, res) => {
 export const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, email, phone, password, role, isActive } = req.body;
+    const { name, email, phone, password, role,  } = req.body;
 
     const updatedUser = await User.findByIdAndUpdate(
       id,
-      { name, email, phone, password, role, isActive },
+      { name, email, phone, password, role,  },
       { new: true } // Return the updated user
     );
 
