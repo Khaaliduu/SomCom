@@ -2,6 +2,8 @@ import express from 'express';
 import connectToDb from './config/db.js';
 import userRoute from './routes/userRoute.js';
 import courseRoutes from './routes/courseRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
+
 import dotenv from 'dotenv';
 
 
@@ -18,6 +20,9 @@ app.use('/api/users', userRoute); // Connect the user route
 
 // Middleware for courses
 app.use('/api/courses', courseRoutes);
+//  cart and wishlist Routes
+app.use('/api/cart', cartRoutes);
+
 
 
 // // Default route for testing

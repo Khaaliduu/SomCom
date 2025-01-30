@@ -1,6 +1,7 @@
 // import mongoose from 'mongoose';
 import mongoose from 'mongoose';
 import ratingSchema from './ratingsModel.js';
+import videosSchema from './videosModel.js';
 const courseSchema = mongoose.Schema({
     title:{
         type:String,
@@ -35,6 +36,7 @@ const courseSchema = mongoose.Schema({
         type:Number,
         required:true
     },
+    videos: [videosSchema],
     rating:{
         type:Number,
         required:true,
