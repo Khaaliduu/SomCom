@@ -34,12 +34,27 @@ const userSchema = new mongoose.Schema({
   // },
   wishlist:[
     {
-
-  }
+      course:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref: 'courses'
+      }
+    }
 ], // this is favrite 
-  cart:[{
-    
-  }],  //hi is cart courses
+  cart:[
+    {
+      course:{
+          type:mongoose.Schema.Types.ObjectId,
+          required:true,
+          ref: 'courses'
+      },
+      quantity:{
+          type: Number ,
+          required:true
+      }
+
+  },
+],  //hi is cart courses
 });
 
 // Export the model
