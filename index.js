@@ -3,6 +3,7 @@ import connectToDb from './config/db.js';
 import userRoute from './routes/userRoute.js';
 import courseRoutes from './routes/courseRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
+import cors from 'cors';
 
 import dotenv from 'dotenv';
 
@@ -13,6 +14,7 @@ connectToDb()
 const port = process.env.PORT || 3000
 
 app.use(express.json())
+app.use(cors())
 // app.use('/api/users/',userRoute)
 
 // Routes
