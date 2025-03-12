@@ -16,6 +16,7 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    isFavorite: { type: Boolean, default: false },
     price: {
         type: Number,
         required: true,
